@@ -35,7 +35,7 @@ In addition to secure communications, FORTHify supports many basic FORTH operati
 - '>': Greater than.
 - '<=': Less than or equal to.
 - '>=': Greater than or equal to.
-- FORTHify is expected to support an even more extensive amount of operations soon!
+- FORTHify is expected to support a more extensive amount of operations soon!
 
 ## License
 
