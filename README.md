@@ -7,9 +7,9 @@ FORTHify is an implementation of the stack-based FORTH language designed for the
 2. Provide hashing algorithms which consistently produce reliable hashes of inputs
 3. To devote a particular emphasis on the speed at which these operations and algorithms take place
 
+
 #
-#
-#
+
 Encryption algorithms expected to be implemented in FORTHify [AAG IT](https://aag-it.com/the-latest-phishing-statistics/)
 > * [Substitution](https://en.wikipedia.org/wiki/Substitution_cipher#:~:text=In%20cryptography%2C%20a%20substitution%20cipher,the%20above%2C%20and%20so%20forth)
 > * [Rotation](https://en.wikipedia.org/wiki/Caesar_cipher)
