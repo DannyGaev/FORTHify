@@ -9,7 +9,7 @@
 int main(int argc, char *argv[])
 {
     char *input;
-    char buffer[100];
+    char buffer[100]; 
     const int capacity = 100;
 
     int_stack_t myIntStack;
@@ -47,7 +47,7 @@ int main(int argc, char *argv[])
                 resolveWord(returnToken.text, &myIntStack, textLength);
                 break;
             case SYMB:
-                resolveSymbol(returnToken.text, &myIntStack);
+                resolveSymbol(returnToken.text, &myIntStack, &myGenStack, textLength);
                 break;
             case VAR:
                 resolveVariable(returnToken.text, &myGenStack, textLength);
