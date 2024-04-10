@@ -6,8 +6,8 @@ void resolveArith(char *answer, int_stack_t *myIntStack);
 
 void resolveWord(char *answer, int_stack_t *myIntStack, int textLength);
 
-void resolveSymbol(char *answer, int_stack_t *myIntStack);
+void resolveSymbol(char *answer, int_stack_t *myIntStack, general_stack_t *myGeneralStack, int textLength);
 
 void resolveVariable(char *answer, general_stack_t *myGeneralStack, int textLength);
 
-#endif
+#endif 
