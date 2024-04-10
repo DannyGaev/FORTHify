@@ -8,7 +8,7 @@ char *generateSpaceless(char *input)
     token = strtok(input, " ");
     return token;
 }
-
+ 
 TOKEN parseTokens(char *token)
 {
     const int textLength = strlen(token);
@@ -25,7 +25,7 @@ TOKEN parseTokens(char *token)
         returnToken.type_t = SYMB;
  
     else if (isdigit(*token) != 0)
-        returnToken.type_t = NUM;
+        returnToken.type_t = NUM; 
 
     else if (strcmp(text, "variable") == 0)
         returnToken.type_t = VAR;
