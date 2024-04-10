@@ -55,21 +55,24 @@ void resolveWord(char *answer, int_stack_t *mis, int textLength)
         exit(0);
     }
 }
-
+ 
 void resolveVariable(char *answer, general_stack_t *mgs, int textLength)
 { 
     char text[textLength + 1];
     strncpy(text, answer, textLength);
     text[textLength-1] = '\0';
-
+    printf("Declared a variable!");
     if (strcmp(text, "variable") == 0)
     {
         general_stack_declare_variable(mgs);
-    }
+    } 
 }
 
-void resolveSymbol(char *answer, int_stack_t *mis)
+void resolveSymbol(char *answer, int_stack_t *mis, general_stack_t *mgs, int textLength)
 {
+    char text[textLength + 1];
+    strncpy(text, answer, textLength);
+    text[textLength - 1] = '\0';
     switch(*answer)
     {
         case '.':
@@ -87,5 +90,12 @@ void resolveSymbol(char *answer, int_stack_t *mis)
         case '=':
             int_stack_equals(mis);
             break;
+        case ':':
+        {
+            printf("DECLARATION => %s\n",text);
+            general_stack_word(mgs, text);
+            break;
+        }
+            
     }
 }
