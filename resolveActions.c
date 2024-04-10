@@ -92,7 +92,7 @@ void resolveSymbol(char *answer, int_stack_t *mis, general_stack_t *mgs, int tex
             break;
         case ':':
         {
-            printf("DECLARATION => %s\n",text);
+            printf("DECLARATIONS => %s\n",text);
             general_stack_word(mgs, text);
             break;
         }
