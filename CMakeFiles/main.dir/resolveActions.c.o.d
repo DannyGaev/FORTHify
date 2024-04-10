@@ -1,6 +1,6 @@
 CMakeFiles/main.dir/resolveActions.c.o: \
-  /Users/oaktree/Documents/GitHub/c-bootcamp-DannyGaev/r_forth/resolveActions.c \
-  /Users/oaktree/Documents/GitHub/c-bootcamp-DannyGaev/r_forth/int_stack.h \
+  /Users/oaktree/Documents/GitHub/FORTHify/resolveActions.c \
+  /Users/oaktree/Documents/GitHub/FORTHify/int_stack.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/stdio.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/_stdio.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/sys/cdefs.h \
@@ -38,8 +38,8 @@ CMakeFiles/main.dir/resolveActions.c.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/secure/_stdio.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/secure/_common.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/sys/queue.h \
-  /Users/oaktree/Documents/GitHub/c-bootcamp-DannyGaev/r_forth/general_stack.h \
-  /Users/oaktree/Documents/GitHub/c-bootcamp-DannyGaev/r_forth/token.h \
+  /Users/oaktree/Documents/GitHub/FORTHify/general_stack.h \
+  /Users/oaktree/Documents/GitHub/FORTHify/token.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/string.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/sys/_types/_rsize_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/sys/_types/_errno_t.h \

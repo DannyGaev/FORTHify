@@ -20,6 +20,7 @@ typedef struct general_stack
 
 extern void general_stack_init(general_stack_t *stk, int capacity);
 extern void general_stack_declare_variable(general_stack_t *stk);
+extern void general_stack_word(general_stack_t *stk, char decl[]);
 extern int general_stack_push(general_stack_t *stk, char* value);
 extern int general_stack_pop(general_stack_t *stk, char* top_value);
 

@@ -40,11 +40,16 @@ int general_stack_pop(general_stack_t *stk, char* top_value)
         stk->size--;
         top_value = value;
         return 1; // success
-    }
+    } 
     return 0; // fail
-}
+} 
 
 void general_stack_declare_variable(general_stack_t *stk)
 {
     general_stack_push(stk,"variable");
+}
+
+void general_stack_word(general_stack_t *stk, char decl[])
+{
+    
 }

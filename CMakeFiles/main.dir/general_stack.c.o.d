@@ -1,6 +1,6 @@
 CMakeFiles/main.dir/general_stack.c.o: \
-  /Users/oaktree/Documents/GitHub/c-bootcamp-DannyGaev/r_forth/general_stack.c \
-  /Users/oaktree/Documents/GitHub/c-bootcamp-DannyGaev/r_forth/general_stack.h \
+  /Users/oaktree/Documents/GitHub/FORTHify/general_stack.c \
+  /Users/oaktree/Documents/GitHub/FORTHify/general_stack.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/stdio.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/_stdio.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/sys/cdefs.h \

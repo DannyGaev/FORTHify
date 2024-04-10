@@ -1,5 +1,5 @@
 CMakeFiles/main.dir/main.c.o: \
-  /Users/oaktree/Documents/GitHub/c-bootcamp-DannyGaev/r_forth/main.c \
+  /Users/oaktree/Documents/GitHub/FORTHify/main.c \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/stdio.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/_stdio.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/sys/cdefs.h \
@@ -83,8 +83,8 @@ CMakeFiles/main.dir/main.c.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/strings.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/secure/_strings.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/secure/_string.h \
-  /Users/oaktree/Documents/GitHub/c-bootcamp-DannyGaev/r_forth/token.h \
-  /Users/oaktree/Documents/GitHub/c-bootcamp-DannyGaev/r_forth/int_stack.h \
+  /Users/oaktree/Documents/GitHub/FORTHify/token.h \
+  /Users/oaktree/Documents/GitHub/FORTHify/int_stack.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/sys/queue.h \
-  /Users/oaktree/Documents/GitHub/c-bootcamp-DannyGaev/r_forth/general_stack.h \
-  /Users/oaktree/Documents/GitHub/c-bootcamp-DannyGaev/r_forth/resolveActions.h
+  /Users/oaktree/Documents/GitHub/FORTHify/general_stack.h \
+  /Users/oaktree/Documents/GitHub/FORTHify/resolveActions.h

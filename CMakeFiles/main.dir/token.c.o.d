@@ -1,5 +1,5 @@
 CMakeFiles/main.dir/token.c.o: \
-  /Users/oaktree/Documents/GitHub/c-bootcamp-DannyGaev/r_forth/token.c \
+  /Users/oaktree/Documents/GitHub/FORTHify/token.c \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/ctype.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/_ctype.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/sys/cdefs.h \
@@ -41,4 +41,4 @@ CMakeFiles/main.dir/token.c.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/secure/_strings.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/secure/_common.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/secure/_string.h \
-  /Users/oaktree/Documents/GitHub/c-bootcamp-DannyGaev/r_forth/token.h
+  /Users/oaktree/Documents/GitHub/FORTHify/token.h

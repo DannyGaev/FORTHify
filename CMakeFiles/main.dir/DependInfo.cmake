@@ -8,15 +8,19 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/oaktree/Documents/GitHub/c-bootcamp-DannyGaev/r_forth/general_stack.c" "CMakeFiles/main.dir/general_stack.c.o" "gcc" "CMakeFiles/main.dir/general_stack.c.o.d"
-  "/Users/oaktree/Documents/GitHub/c-bootcamp-DannyGaev/r_forth/int_stack.c" "CMakeFiles/main.dir/int_stack.c.o" "gcc" "CMakeFiles/main.dir/int_stack.c.o.d"
-  "/Users/oaktree/Documents/GitHub/c-bootcamp-DannyGaev/r_forth/main.c" "CMakeFiles/main.dir/main.c.o" "gcc" "CMakeFiles/main.dir/main.c.o.d"
-  "/Users/oaktree/Documents/GitHub/c-bootcamp-DannyGaev/r_forth/resolveActions.c" "CMakeFiles/main.dir/resolveActions.c.o" "gcc" "CMakeFiles/main.dir/resolveActions.c.o.d"
-  "/Users/oaktree/Documents/GitHub/c-bootcamp-DannyGaev/r_forth/token.c" "CMakeFiles/main.dir/token.c.o" "gcc" "CMakeFiles/main.dir/token.c.o.d"
+  "/Users/oaktree/Documents/GitHub/FORTHify/general_stack.c" "CMakeFiles/main.dir/general_stack.c.o" "gcc" "CMakeFiles/main.dir/general_stack.c.o.d"
+  "/Users/oaktree/Documents/GitHub/FORTHify/int_stack.c" "CMakeFiles/main.dir/int_stack.c.o" "gcc" "CMakeFiles/main.dir/int_stack.c.o.d"
+  "/Users/oaktree/Documents/GitHub/FORTHify/main.c" "CMakeFiles/main.dir/main.c.o" "gcc" "CMakeFiles/main.dir/main.c.o.d"
+  "/Users/oaktree/Documents/GitHub/FORTHify/resolveActions.c" "CMakeFiles/main.dir/resolveActions.c.o" "gcc" "CMakeFiles/main.dir/resolveActions.c.o.d"
+  "/Users/oaktree/Documents/GitHub/FORTHify/token.c" "CMakeFiles/main.dir/token.c.o" "gcc" "CMakeFiles/main.dir/token.c.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
 set(CMAKE_Fortran_TARGET_LINKED_INFO_FILES
+  )
+
+# Targets to which this target links which contain Fortran sources.
+set(CMAKE_Fortran_TARGET_FORWARD_LINKED_INFO_FILES
   )
 
 # Fortran module output directory.
