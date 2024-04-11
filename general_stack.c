@@ -49,7 +49,7 @@ void general_stack_declare_variable(general_stack_t *stk)
     general_stack_push(stk,"variable");
 }
 
-void general_stack_word(general_stack_t *stk, char decl[])
-{
+// void general_stack_word(general_stack_t *stk, char decl[])
+// {
     
-}
+// }
