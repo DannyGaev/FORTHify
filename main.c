@@ -16,8 +16,8 @@ int main(int argc, char *argv[])
 
     printf("\nTYPE 'exit' TO EXIT THE PROGRAM\n");
 
-    char input[20];
-    char *token_array[20];
+    char input[100];
+    char *token_array[100];
     int going = 1;
     while (going)
     {
