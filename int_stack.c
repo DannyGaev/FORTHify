@@ -15,6 +15,7 @@ void int_stack_init(int_stack_t *stk, int capacity)
 
 int int_stack_push(int_stack_t *stk, int value)
 {
+
     if (stk->size >= stk->capacity)
     {
         printf("Stack is at full capacity.\n");
@@ -30,7 +31,6 @@ int int_stack_push(int_stack_t *stk, int value)
         return 1; // success
     }
     return 0; // fail
-    
 }
 
 int int_stack_pop(int_stack_t *stk, int *top_value)
@@ -71,7 +71,7 @@ int int_stack_dup(int_stack_t *stk)
 }
 
 int int_stack_swap(int_stack_t *stk)
-{ 
+{
     if (stk->size < 2)
         return 0;
     int top_value, next_to_top_value;
@@ -100,7 +100,7 @@ int int_stack_over(int_stack_t *stk)
     int_stack_push(stk, top_value);
     return int_stack_push(stk, next_to_top_value);
 }
- 
+
 int int_stack_rot(int_stack_t *stk)
 {
     if (stk->size < 3)
@@ -274,12 +274,13 @@ void int_stack_print(int_stack_t *stk, FILE *file)
     SLIST_FOREACH(entry, &stk->head, entries)
     {
         char str[sizeof(entry->value)];
-        sprintf(str, "%d ", entry->value);
+        printf("%d ", entry->value);
+
         strcat(elems, str);
     }
 
-    char* token = strtok(elems, " \t\n");
-    char* tokens[100];
+    char *token = strtok(elems, " \t\n");
+    char *tokens[100];
 
     int count = 0;
     while (token != NULL)
