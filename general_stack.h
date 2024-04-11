@@ -1,4 +1,4 @@
-#ifndef GENERAL_STACK_H
+#ifndef GENERAL_STACK_H 
 #define GENERAL_STACK_H
 
 #include <stdio.h>
