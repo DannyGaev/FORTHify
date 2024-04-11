@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
                 going = 0;
                 break;
             }
-            printf("ELEMENT %d: %s\n", x, token_array[x]);
+            // printf("ELEMENT %d: %s\n", x, token_array[x]);
             TOKEN returnToken = parseTokens(token_array[x]);
             const int textLength = strlen(returnToken.text);
             switch (returnToken.type_t)
