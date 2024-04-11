@@ -21,7 +21,6 @@ int main(int argc, char *argv[])
     int going = 1;
     while (going)
     {
-
         printf(": ");
         fgets(input, sizeof(input), stdin);
         generateSpaceless(input, token_array);
