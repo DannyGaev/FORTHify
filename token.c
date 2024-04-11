@@ -1,14 +1,25 @@
 #include <ctype.h>
 #include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
 #include "token.h"
 
-char *generateSpaceless(char *input) 
+void generateSpaceless(char *input, char *token_array[])
 {
     char *token;
+    char *temp_token;
+    int i = 0;
     token = strtok(input, " ");
-    return token;
+
+    while (token != NULL)
+    {
+        token_array[i] = token;
+        token_array[i][strcspn(token_array[i], "\n")] = '\0';
+        i++;
+        token = strtok(NULL, " ");
+    }
 }
- 
+
 TOKEN parseTokens(char *token)
 {
     const int textLength = strlen(token);
@@ -23,16 +34,16 @@ TOKEN parseTokens(char *token)
 
     else if (*token == ':' || *token == ';' || *token == '.' || *token == '>' || *token == '<' || *token == '=')
         returnToken.type_t = SYMB;
- 
+
     else if (isdigit(*token) != 0)
-        returnToken.type_t = NUM; 
+        returnToken.type_t = NUM;
 
     else if (strcmp(text, "variable") == 0)
         returnToken.type_t = VAR;
 
     else
         returnToken.type_t = WORD;
-        
+
     returnToken.text = token;
 
     return returnToken;
@@ -51,8 +62,8 @@ char *resolveToString(enum token_type_t type_t)
 
     else if (type_t == ARITH_OP)
         return "Arithmetic Operator";
-     
-    else if(type_t == VAR)
+
+    else if (type_t == VAR)
         return "Variable";
 
     return "NULL";
