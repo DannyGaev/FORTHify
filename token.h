@@ -7,7 +7,7 @@ enum token_type_t
 {
     NUM,
     ARITH_OP,
-    SYMB, 
+    SYMB,
     WORD,
     VAR
 } type_t;
@@ -22,8 +22,6 @@ TOKEN parseTokens(char *token);
 
 char *resolveToString(enum token_type_t type_t);
 
-char *generateSpaceless(char *input);
-
-char *resolveArithOp(char *symbol);
+void generateSpaceless(char *input, char *token_array[]);
 
 #endif
