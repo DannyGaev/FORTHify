@@ -8,27 +8,37 @@
 
 int main(int argc, char *argv[])
 {
-    char *input;
-    char buffer[100]; 
-    const int capacity = 100;
 
+    const int capacity = 100;
     int_stack_t myIntStack;
     general_stack_t myGenStack;
+    int_stack_init(&myIntStack, capacity);
+
     printf("\nTYPE 'exit' TO EXIT THE PROGRAM\n");
 
-    int_stack_init(&myIntStack, capacity);
-    printf(": ");
-    fgets(input, sizeof(buffer), stdin);
-
-    char *token = generateSpaceless(input);
-    while(strcmp(token, "exit") != 0)  
+    char input[20];
+    char *token_array[20];
+    int going = 1;
+    while (going)
     {
-        while (token != NULL)
+
+        printf(": ");
+        fgets(input, sizeof(input), stdin);
+        generateSpaceless(input, token_array);
+        int x = 0;
+        while (token_array[x] != NULL)
         {
-            TOKEN returnToken = parseTokens(token);
+            if (strcmp(token_array[x], "exit") == 0)
+            {
+                printf("\nLeaving FORTHify -- stay secure!\n\n");
+                going = 0;
+                break;
+            }
+            printf("ELEMENT %d: %s\n", x, token_array[x]);
+            TOKEN returnToken = parseTokens(token_array[x]);
             const int textLength = strlen(returnToken.text);
             switch (returnToken.type_t)
-            { 
+            {
             case NUM:
             {
                 int value = atoi(returnToken.text);
@@ -52,14 +62,10 @@ int main(int argc, char *argv[])
             case VAR:
                 resolveVariable(returnToken.text, &myGenStack, textLength);
             }
-            token = strtok(NULL, " ");
+            x++;
         }
-        int_stack_print(&myIntStack, stdout);
-        printf(": ");
-        fgets(input, sizeof(buffer), stdin);
-        token = generateSpaceless(input);
-        
+        if (going)
+            int_stack_print(&myIntStack, stdout);
     }
-
     return EXIT_SUCCESS;
 }
