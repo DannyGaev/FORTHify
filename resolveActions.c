@@ -7,7 +7,7 @@
 void resolveArith(char *answer, int_stack_t *mis)
 {
     switch (*answer)
-    { 
+    {
     case '+':
         int_stack_add(mis);
         break;
@@ -26,9 +26,9 @@ void resolveArith(char *answer, int_stack_t *mis)
 void resolveWord(char *answer, int_stack_t *mis, int textLength)
 {
 
-    char text[textLength+1];
+    char text[textLength + 1];
     strncpy(text, answer, textLength);
-    text[textLength-1] = '\0';
+    text[textLength - 1] = '\0';
 
     if (strcmp(text, "rot") == 0)
     {
@@ -50,52 +50,67 @@ void resolveWord(char *answer, int_stack_t *mis, int textLength)
     {
         int_stack_over(mis);
     }
-    else if(strcmp(text, "exit") == 0)
+    else if (strcmp(text, "exit") == 0)
     {
         exit(0);
     }
 }
- 
-void resolveVariable(char *answer, general_stack_t *mgs, int textLength)
-{ 
-    char text[textLength + 1];
-    strncpy(text, answer, textLength);
-    text[textLength-1] = '\0';
-    printf("Declared a variable!");
-    if (strcmp(text, "variable") == 0)
-    {
-        general_stack_declare_variable(mgs);
-    } 
-}
 
-void resolveSymbol(char *answer, int_stack_t *mis, general_stack_t *mgs, int textLength)
+void resolveVariable(char *answer, general_stack_t *mgs, int textLength)
 {
     char text[textLength + 1];
     strncpy(text, answer, textLength);
     text[textLength - 1] = '\0';
-    switch(*answer)
+    printf("Declared a variable!");
+    if (strcmp(text, "variable") == 0)
     {
-        case '.':
+        general_stack_declare_variable(mgs);
+    }
+}
+
+void resolveSymbol(char *answer, int_stack_t *mis, general_stack_t *mgs, int textLength, char *token_array[])
+{
+    switch (*answer)
+    {
+    case '.':
+    {
+        int top_value;
+        int_stack_pop(mis, &top_value);
+        break;
+    }
+    case '<':
+        int_stack_less_than(mis);
+        break;
+    case '>':
+        int_stack_greater_than(mis);
+        break;
+    case '=':
+        int_stack_equals(mis);
+        break;
+    case ':':
+    {
+        char *els[20];
+        if (token_array[1] == NULL)
         {
-            int top_value;
-            int_stack_pop(mis, &top_value);
+            printf("?");
+        }
+        else
+        {
+            int x = 2;
+            els[0] = token_array[x - 1];
+            printf("WORD NAME: %s\n", token_array[x - 2]);
+            while (strcmp(token_array[x], ";") != 0)
+            {
+                printf("DECLARATIONS => %s\n", token_array[x]);
+                els[x - 1] = token_array[x];
+                token_array[x] = NULL;
+                els[x - 1][strcspn(els[x - 1], "\n")] = '\0';
+                x++; 
+            }
+            els[x - 1] = NULL;
+            general_stack_word(mgs, els);
             break;
         }
-        case '<':
-            int_stack_less_than(mis);
-            break;
-        case '>':
-            int_stack_greater_than(mis);
-            break;
-        case '=':
-            int_stack_equals(mis);
-            break;
-        case ':':
-        {
-            printf("DECLARATIONS => %s\n",text);
-            general_stack_word(mgs, text);
-            break;
-        }
-            
+    }
     }
 }
