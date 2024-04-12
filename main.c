@@ -56,7 +56,7 @@ int main(int argc, char *argv[])
                 resolveWord(returnToken.text, &myIntStack, textLength);
                 break;
             case SYMB:
-                resolveSymbol(returnToken.text, &myIntStack, &myGenStack, textLength);
+                resolveSymbol(returnToken.text, &myIntStack, &myGenStack, textLength, token_array);
                 break;
             case VAR:
                 resolveVariable(returnToken.text, &myGenStack, textLength);
