@@ -267,6 +267,7 @@ void int_stack_print(int_stack_t *stk, FILE *file)
     if (stk->size == 0)
     {
         fprintf(file, "empty stack\n");
+        return;
     }
 
     char *elems = (char *)malloc(length * sizeof(char));
