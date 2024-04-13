@@ -9,7 +9,7 @@
 int main(int argc, char *argv[])
 {
 
-    const int capacity = 100;
+    const int capacity = 100; 
     int_stack_t myIntStack;
     general_stack_t myGenStack;
     int_stack_init(&myIntStack, capacity);
