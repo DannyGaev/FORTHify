@@ -97,18 +97,18 @@ void resolveSymbol(char *answer, int_stack_t *mis, general_stack_t *mgs, int tex
         else
         {
             int x = 2;
-            els[0] = token_array[x - 1];
-            printf("WORD NAME: %s\n", token_array[x - 2]);
+            char wordName[strlen(token_array[x - 1])];
+            strncpy(wordName, token_array[x - 1], strlen(token_array[x - 1]));
             while (strcmp(token_array[x], ";") != 0)
             {
                 printf("DECLARATIONS => %s\n", token_array[x]);
-                els[x - 1] = token_array[x];
+                els[x - 2] = token_array[x];
                 token_array[x] = NULL;
-                els[x - 1][strcspn(els[x - 1], "\n")] = '\0';
-                x++; 
+                els[x - 2][strcspn(els[x - 2], "\n")] = '\0';
+                x++;
             }
             els[x - 1] = NULL;
-            general_stack_word(mgs, els);
+            general_stack_word(mgs, els, wordName);
             break;
         }
     }
