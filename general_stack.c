@@ -50,12 +50,32 @@ void general_stack_declare_variable(general_stack_t *stk)
     general_stack_push(stk, "variable");
 }
 
-void general_stack_word(general_stack_t *stk, char *els[])
+void general_stack_word(general_stack_t *stk, char *els[], char wordName[])
 {
-    char fullCommand[21];
-    strncpy(fullCommand, *els, 20);
-    fullCommand[20] = '\0';
-    general_stack_push(stk, fullCommand);
-
-    printf("Succesfully declared word: %c\n", fullCommand[0]);
+    // int size= sizeof(&els) / sizeof(&els[0]);
+    int size = 0;
+    int x = 0;
+    while (els[x] != NULL)
+    {
+        size++;
+        x++;
+    }
+    printf("SIZE: %d\n", size);
+    char *fullCommand[size];
+    x = 0;
+    while (x < size - 1)
+    {
+        fullCommand[x] = els[x];
+        fullCommand[x][strcspn(fullCommand[x], "\n")] = '\0';
+        x++;
+    }
+    // printf("Now pushing...");
+    // char *full = (char *)malloc(size + 1);
+    // full[0] = '\0'; // Ensure the string is initially empty
+    // for (int i = 0; i < size; i++)
+    // {
+    //     strcat(full, fullCommand[i]);
+    // }
+    // general_stack_push(stk, full);
+    printf("Succesfully declared word: %s\n", wordName);
 }
