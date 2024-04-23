@@ -5,7 +5,7 @@
 FORTHify is an implementation of the stack-based FORTH language designed for the encryption, decryption, and hashing of user communications. The main focuses of the project are:
 1. To facilitate various encryption methods and their accompanying decryption methods
 2. Provide hashing algorithms which consistently produce reliable hashes of inputs
-3. To devote a particular emphasis on the speed at which these operations and algorithms take place
+3. Devoting a particular emphasis on the speed at which these operations and algorithms take place
 
 
 #
