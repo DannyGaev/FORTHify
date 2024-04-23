@@ -21,7 +21,7 @@ Encryption algorithms expected to be implemented in FORTHify:
 
 ## Basic FORTH operations
 
-In addition to secure communications, FORTHify supports many basic FORTH operations:
+In addition to facilitating more secure communications, FORTHify supports many basic FORTH operations:
 
 - 'DUP': Duplicate the top item on the stack
 - 'DROP': Remove the top item from the stack
