@@ -75,6 +75,30 @@ void resolveWord(char *answer, int_stack_t *mis, int textLength, char *token_arr
             ceasarCipher(els, increment);
         }
     }
+    else if (strcmp(text, "t") == 0)
+    {
+        char *els[20];
+        if (token_array[1] == NULL)
+        {
+            printf("?");
+        }
+        else
+        {
+            int x = 1;
+            char wordName[strlen(token_array[x])];
+            strncpy(wordName, token_array[x], strlen(token_array[x]));
+            while (strcmp(token_array[x], ";") != 0)
+            {
+                els[x - 1] = token_array[x];
+                token_array[x] = NULL;
+                els[x - 1][strcspn(els[x - 1], "\n")] = '\0';
+                x++;
+            }
+            printf("%d\n", x);
+            els[x - 1] = NULL;
+            transpoCipher(els, els[0]);
+        }
+    }
     else if (strcmp(text, "exit") == 0)
     {
         exit(0);
