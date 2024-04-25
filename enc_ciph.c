@@ -41,12 +41,6 @@ void transpoCipher(char *els[], char *keyWord)
         fullLength += strlen(els[x]);
         x++;
     }
-    x = 0;
-    printf("KEYWORD: %s\n", keyWord);
-    printf("KEYWORD LENGTH: %d\n", length);
-    printf("SIZE OF ELS: %d\n", size);
-    printf("LENGTH OF MESSAGE: %d\n", fullLength);
-
     for (size_t i = 0; i < length; i++)
     {
         keyWord[i] = tolower(keyWord[i]);
@@ -67,9 +61,6 @@ void transpoCipher(char *els[], char *keyWord)
 
     int maxCols = length;
     int maxItems = (fullLength + (length - 1)) / length;
-    printf("\n");
-    printf("MAX NUMBER OF ITEMS PER COLUMN: %d\n", maxItems);
-    printf("MAX NUMBER OF COLUMNS: %d\n", maxCols);
     char encrypted_message[maxCols][maxItems];
     int z = 0;
     int inc = 0;
@@ -87,9 +78,7 @@ void transpoCipher(char *els[], char *keyWord)
                 col = 0;
                 row += 1;
             }
-            // printf("%c", els[z + 1][inc]);
             encrypted_message[col][row] = els[z + 1][inc];
-            // printf("ADDED TO ENC_MESS: %c AT COLUMN: %d and ROW: %d\n", encrypted_message[col][row],col,row);
             col++;
             inc++;
         }
