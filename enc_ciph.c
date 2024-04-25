@@ -41,6 +41,7 @@ void transpoCipher(char *els[], char *keyWord)
         fullLength += strlen(els[x]);
         x++;
     }
+
     for (size_t i = 0; i < length; i++)
     {
         keyWord[i] = tolower(keyWord[i]);
@@ -62,6 +63,14 @@ void transpoCipher(char *els[], char *keyWord)
     int maxCols = length;
     int maxItems = (fullLength + (length - 1)) / length;
     char encrypted_message[maxCols][maxItems];
+    for (int i = 0; i < maxCols; ++i)
+    {
+        for (int j = 0; j < maxItems; ++j)
+        {
+            encrypted_message[i][j] = ' ';
+        }
+    }
+
     int z = 0;
     int inc = 0;
     int leftover = 0;
@@ -73,7 +82,6 @@ void transpoCipher(char *els[], char *keyWord)
         {
             if (inc - (length - leftover) == 0 && inc != 0)
             {
-                printf("\n");
                 leftover = strlen(els[z + 1]) - inc;
                 col = 0;
                 row += 1;
@@ -85,12 +93,28 @@ void transpoCipher(char *els[], char *keyWord)
         inc = 0;
         z++;
     }
-    printf("\n");
-    for (int i = 0; i < maxCols; ++i)
+
+    printf("ENCRYPTED MESSAGE: ");
+    int posInc = 0;
+    while (posInc < length)
     {
-        for (int j = 0; j < maxItems; ++j)
+        int smallestIndex = 0;
+        int oldSmallest = smallestIndex;
+        for (int g = 0; g < length; g++)
         {
-            printf("At column: %d and row: %d, there is: %c\n", i, j, encrypted_message[i][j]);
+            if (pos[g] < pos[smallestIndex])
+                smallestIndex = g;
         }
+        pos[smallestIndex] = 9999;
+        int e = 0;
+        while (e < maxItems)
+        {
+            if (encrypted_message[smallestIndex][e] != ' ')
+            {
+                printf("%c", encrypted_message[smallestIndex][e]);
+            }
+            e++;
+        }
+        posInc++;
     }
 }
