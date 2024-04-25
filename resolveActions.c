@@ -75,7 +75,7 @@ void resolveWord(char *answer, int_stack_t *mis, int textLength, char *token_arr
             ceasarCipher(els, increment);
         }
     }
-    else if (strcmp(text, "t") == 0)
+    else if (strcmp(text, "transposition") == 0)
     {
         char *els[20];
         if (token_array[1] == NULL)
