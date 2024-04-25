@@ -14,8 +14,10 @@ Encryption algorithms expected to be implemented in FORTHify:
 > * [Substitution](https://en.wikipedia.org/wiki/Substitution_cipher#:~:text=In%20cryptography%2C%20a%20substitution%20cipher,the%20above%2C%20and%20so%20forth)
 > * [Rotation](https://en.wikipedia.org/wiki/Caesar_cipher)
 >    - Ceasar cipher syntax (do not include braces):     
->       - "ceasar {increment} {message_content} ;"
+>       - ceasar {increment} {message_content} ;
 > * [Transposition](https://en.wikipedia.org/wiki/Transposition_cipher)
+>    - Transposition cipher syntax (do not include braces):
+>       - transposition {keyword} {message_content} ;
 > * [Variations on choice encryption algorithms](https://www.arcserve.com/blog/5-common-encryption-algorithms-and-unbreakables-future)
 > * [Variations on choice hashing algorithms](https://www.okta.com/identity-101/hashing-algorithms/)
 
