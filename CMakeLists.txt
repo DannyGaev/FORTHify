@@ -12,4 +12,8 @@ add_executable (
         token.c
         resolveActions
         resolveActions.c
+        word_stack
+        word_stack.c
+        enc_ciph
+        enc_ciph.c
 )
