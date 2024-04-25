@@ -94,7 +94,6 @@ void resolveWord(char *answer, int_stack_t *mis, int textLength, char *token_arr
                 els[x - 1][strcspn(els[x - 1], "\n")] = '\0';
                 x++;
             }
-            printf("%d\n", x);
             els[x - 1] = NULL;
             transpoCipher(els, els[0]);
         }
