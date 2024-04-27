@@ -118,3 +118,82 @@ void transpoCipher(char *els[], char *keyWord)
         posInc++;
     }
 }
+
+void morseCipher(char *els[])
+{
+    char *symbolTable[46][2] = {
+        {"a", "*-"},
+        {"b", "-***"},
+        {"c", "-*-*"},
+        {"d", "-**"},
+        {"e", "*"},
+        {"f", "**-*"},
+        {"g", "--*"},
+        {"h", "****"},
+        {"i", "**"},
+        {"j", "*---"},
+        {"k", "-*-"},
+        {"l", "*-**"},
+        {"m", "--"},
+        {"n", "-*"},
+        {"o", "---"},
+        {"p", "*--*"},
+        {"q", "--*-"},
+        {"r", "*-*"},
+        {"s", "***"},
+        {"t", "-"},
+        {"u", "**-"},
+        {"v", "***-"},
+        {"w", "*--"},
+        {"x", "-**-"},
+        {"y", "-*--"},
+        {"z", "--**"},
+        {"1", "*----"},
+        {"2", "**---"},
+        {"3", "***--"},
+        {"4", "****-"},
+        {"5", "*****"},
+        {"6", "-****"},
+        {"7", "--***"},
+        {"8", "---**"},
+        {"9", "----*"},
+        {"0", "-----"},
+        {".", "*-*-*-"},
+        {",", "--**--"},
+        {":", "---***"},
+        {"?", "**--**"},
+        {"'", "*----*"},
+        {"-", "-****-"},
+        {"/", "-**-*"},
+        {"(", "-*--*-"},
+        {")", "-*--*-"},
+        {"''", "*-**-*"}};
+    int fullLength = 0;
+    int x = 0;
+    int size = 0;
+    while (els[x] != NULL)
+    {
+        size++;
+        fullLength += strlen(els[x]);
+        x++;
+    }
+    char *morseCode[fullLength];
+    printf("ENCRYPTED MESSAGE: ");
+    for (int y = 0; y < size; y++)
+    {
+        for (int z = 0; z < strlen(els[y]); z++)
+        {
+            for (int i = 0; i < 46; i++)
+            {
+                char tempString[2] = "";
+                char charString[2] = {els[y][z], '\0'};
+                strcpy(tempString, charString);
+                if (strcmp(tempString, symbolTable[i][0]) == 0)
+                {
+                    printf("%s", symbolTable[i][1]);
+                }
+            }
+            printf(" ");
+        }
+    }
+}
