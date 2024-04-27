@@ -18,6 +18,9 @@ Encryption algorithms expected to be implemented in FORTHify:
 > * [Transposition](https://en.wikipedia.org/wiki/Transposition_cipher)
 >    - Transposition cipher syntax (do not include braces):
 >       - transposition {keyword} {message_content} ;
+> * [Morse Code](https://en.wikipedia.org/wiki/Morse_code)
+>    - Morse code syntax (do not include braces):
+>       - morse {message_content} ;
 > * [Variations on choice encryption algorithms](https://www.arcserve.com/blog/5-common-encryption-algorithms-and-unbreakables-future)
 > * [Variations on choice hashing algorithms](https://www.okta.com/identity-101/hashing-algorithms/)
 
