@@ -51,7 +51,7 @@ void resolveWord(char *answer, int_stack_t *mis, int textLength, char *token_arr
     {
         int_stack_over(mis);
     }
-    else if (strcmp(text, "ceasar") == 0)
+    else if (strcmp(text, "rotation") == 0)
     {
         char *els[20];
         if (token_array[1] == NULL)
