@@ -5,4 +5,6 @@ void ceasarCipher(char *els[], int increment);
 
 void transpoCipher(char *els[], char *keyWord);
 
-#endif
+void morseCipher(char *els[]);
+
+#endif 
