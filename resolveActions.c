@@ -51,9 +51,9 @@ void resolveWord(char *answer, int_stack_t *mis, int textLength, char *token_arr
     {
         int_stack_over(mis);
     }
-    else if (strcmp(text, "rotation") == 0)
+    else if (strcmp(text, "ceasar") == 0)
     {
-        char *els[20];
+        char *els[100];
         if (token_array[1] == NULL)
         {
             printf("?");
@@ -75,9 +75,9 @@ void resolveWord(char *answer, int_stack_t *mis, int textLength, char *token_arr
             ceasarCipher(els, increment);
         }
     }
-    else if (strcmp(text, "transposition") == 0)
+    else if (strcmp(text, "t") == 0)
     {
-        char *els[20];
+        char *els[100];
         if (token_array[1] == NULL)
         {
             printf("?");
@@ -97,6 +97,27 @@ void resolveWord(char *answer, int_stack_t *mis, int textLength, char *token_arr
             els[x - 1] = NULL;
             transpoCipher(els, els[0]);
         }
+    }
+    else if (strcmp(text, "morse") == 0)
+    {
+        char *els[100];
+        int x = 1;
+        char wordName[strlen(token_array[x])];
+        strncpy(wordName, token_array[x], strlen(token_array[x]));
+        while (strcmp(token_array[x], ";") != 0)
+        {
+            els[x - 1] = token_array[x];
+            token_array[x] = NULL;
+            els[x - 1][strcspn(els[x - 1], "\n")] = '\0';
+            x++;
+        }
+        els[x - 1] = NULL;
+        morseCipher(els);
+    }
+    else if (strcmp(text, "help") == 0)
+    {
+        printf("\n- Ceasar cipher syntax (do not include braces):\n\t* ceasar {increment} {message_content} ;");
+        printf("\n- Transposition cipher syntax (do not include braces):\n\t* transposition {keyword} {message_content} ;\n");
     }
     else if (strcmp(text, "exit") == 0)
     {
@@ -137,28 +158,27 @@ void resolveSymbol(char *answer, int_stack_t *mis, word_stack_t *mws, int textLe
         break;
     case ':':
     {
-        char *els[20];
+        char *els[100];
         if (token_array[1] == NULL)
         {
             printf("?");
         }
         else
         {
-            int x = 2;
-            char wordName[strlen(token_array[x - 1])];
-            strncpy(wordName, token_array[x - 1], strlen(token_array[x - 1]));
+            int x = 1;
+            char wordName[strlen(token_array[x])];
+            strncpy(wordName, token_array[x], strlen(token_array[x]));
             while (strcmp(token_array[x], ";") != 0)
             {
-                printf("DECLARATIONS => %s\n", token_array[x]);
-                els[x - 2] = token_array[x];
+                els[x - 1] = token_array[x];
                 token_array[x] = NULL;
-                els[x - 2][strcspn(els[x - 2], "\n")] = '\0';
+                els[x - 1][strcspn(els[x - 1], "\n")] = '\0';
                 x++;
             }
-            els[x - 1] = NULL;
-            word_stack_declare(mws, els, wordName);
-            break;
+            els[x] = NULL;
+            word_stack_declare(mws, els);
         }
+        break;
     }
     }
 }
