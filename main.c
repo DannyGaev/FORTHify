@@ -40,12 +40,12 @@ int main(int argc, char *argv[])
             }
             TOKEN returnToken = parseTokens(token_array[x]);
             const int textLength = strlen(returnToken.text);
+            printf("TOKEN TEXT: %s\n", returnToken.text);
             switch (returnToken.type_t)
             {
             case NUM:
             {
                 int value = atoi(returnToken.text);
-
                 int success = int_stack_push(&myIntStack, value);
                 if (!success)
                 {
@@ -65,7 +65,9 @@ int main(int argc, char *argv[])
                 break;
             case VAR:
                 resolveVariable(returnToken.text, &myGenStack, textLength);
+                break;
             }
+            token_array[x] = NULL;
             x++;
         }
         if (going)
