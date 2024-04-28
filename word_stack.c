@@ -38,7 +38,8 @@ void word_stack_declare(word_stack_t *stk3, char *els[])
     int x = 1;
     int fullLength = 0;
     word_entry_t newWord;
-    newWord.name = els[0];
+    newWord.name = malloc(strlen(els[0]) + 1);
+    strcpy(newWord.name, els[0]);
     while (els[x] != NULL)
     {
         fullLength += strlen(els[x]);
@@ -52,38 +53,40 @@ void word_stack_declare(word_stack_t *stk3, char *els[])
         fullCommand[x] = els[x + 1];
         x++;
     }
+    fullCommand[x] = NULL;
     char space[] = " ";
     char full[100] = "\0";
-    for (int i = 0; i < fullLength; i++)
+    int i = 0;
+    while (fullCommand[i] != NULL)
+    // // for (int i = 0; i < fullLength; i++)
     {
         strcat(full, fullCommand[i]);
         strcat(full, space);
+        i++;
     }
-    newWord.full_command = full;
-    printf("NEWWORD FULL COMMAND: %s\n", newWord.full_command);
-    printf("NEWWORD NAME: %s\n", newWord.name);
-
+    newWord.full_command = malloc(strlen(full) + 1);
+    // newWord.full_command = full;
+    strcpy(newWord.full_command, full);
     int pushed = word_stack_push(stk3, newWord);
     if (pushed)
     {
-        printf("Succesfully declared word: %s\n", newWord.name);
+        printf("Succesfully declared word: %s with command: %s\n", newWord.name, newWord.full_command);
     }
 }
 
 void word_stack_print(word_stack_t *stk3, FILE *file)
 {
-    fprintf(file, "\n\tWORD STACK\n");
+    printf("\n\tWORD STACK\n");
     word_entry_t *entry;
     int length = stk3->size;
     if (stk3->size == 0)
     {
-        fprintf(file, "empty stack\n");
+        printf("empty stack\n");
         return;
     }
 
     SLIST_FOREACH(entry, &stk3->head3, entries3)
     {
-        printf("COMMAND: %s\n", entry->full_command);
         printf("\t|NAME: %s\tFULL COMMAND: %s\n", entry->name, entry->full_command);
     }
 }
