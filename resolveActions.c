@@ -158,7 +158,6 @@ void resolveSymbol(char *answer, int_stack_t *mis, word_stack_t *mws, int textLe
         break;
     case ':':
     {
-        char *els[100];
         if (token_array[1] == NULL)
         {
             printf("?");
@@ -166,16 +165,26 @@ void resolveSymbol(char *answer, int_stack_t *mis, word_stack_t *mws, int textLe
         else
         {
             int x = 1;
-            char wordName[strlen(token_array[x])];
-            strncpy(wordName, token_array[x], strlen(token_array[x]));
+            int length = 0;
             while (strcmp(token_array[x], ";") != 0)
             {
+                length++;
+                x++;
+            }
+            printf("LENGTH: %d\n", length);
+            char *els[length + 1];
+            char wordName[strlen(token_array[x])];
+            strncpy(wordName, token_array[x], strlen(token_array[x]));
+            x = 0;
+            while (strcmp(token_array[x], ";") != 0)
+            {
+                printf("Token array at x: %s\n", token_array[x]);
                 els[x - 1] = token_array[x];
                 token_array[x] = NULL;
                 els[x - 1][strcspn(els[x - 1], "\n")] = '\0';
                 x++;
             }
-            els[x] = NULL;
+            els[x - 1] = NULL;
             word_stack_declare(mws, els);
         }
         break;
