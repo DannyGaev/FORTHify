@@ -28,6 +28,7 @@ Encryption algorithms expected to be implemented in FORTHify:
 
 Word Declaration (do not include braces):
 - : {word_name} {word_content} ;
+
 In addition to facilitating more secure communications, FORTHify supports many basic FORTH operations:
 
 - 'DUP': Duplicate the top item on the stack
