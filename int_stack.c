@@ -261,7 +261,7 @@ int int_stack_greater_than(int_stack_t *stk)
 
 void int_stack_print(int_stack_t *stk, FILE *file)
 {
-    fprintf(file, "\n\tSTACK\n\t|");
+    fprintf(file, "\n\tSTACK\n\t| Top -> ");
     int_entry_t *entry;
     int length = stk->size;
     if (stk->size == 0)
@@ -294,8 +294,7 @@ void int_stack_print(int_stack_t *stk, FILE *file)
     {
         fprintf(file, "%s ", tokens[i]);
     }
-
-    fprintf(file, "<- Top|\n\n");
+    fprintf(file, "|\n\n");
 }
 
 int int_stack_size(int_stack_t *stk)
